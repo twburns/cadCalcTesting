@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.twburnsgmail.opiecalc.MainActivity$PlaceholderFragment">
+
+    <Button
+        android:text="Feet &#9658; Inches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_feet_inches"
+        android:layout_below="@+id/b_feet_links"
+        android:layout_alignParentEnd="true"
+        android:onClick="convFeetInch" />
+
+    <Button
+        android:text="Feet &#9658; Links"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_feet_links"
+        android:layout_below="@+id/b_links_feet"
+        android:layout_alignParentStart="true"
+        android:onClick="convFeetLink" />
+
+    <Button
+        android:text="Feet &#9658; chains"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_feet_chains"
+        android:layout_below="@+id/b_feet_inches"
+        android:layout_alignParentStart="true"
+        android:onClick="convFeetChain" />
+
+    <Button
+        android:text="Chains &#9658; Feet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_chains_feet"
+        android:layout_below="@+id/b_feet_chains"
+        android:layout_alignParentStart="true"
+        android:onClick="convChainFeet" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_conv_result"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Circumference Feet &#9658; Diameter Inches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_chains_feet"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/b_circumference"
+        android:onClick="calcDiameter" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText_conv_input"
+        android:textAlignment="center"
+        android:hint="enter value"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/textView_conv_result"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_links_feet"
+        android:text="Links &#9658; Feet"
+        android:onClick="convLinkFeet"
+        android:layout_below="@+id/editText_conv_input"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.twburnsgmail.opiecalc.MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_rtk_result"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/textView_dist_rtk"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editText_dist_rtk"
+        android:textAlignment="center"
+        android:hint=" enter distance in ft" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText_dist_bt"
+        android:textAlignment="center"
+        android:hint="enter distance in ft"
+        android:layout_below="@+id/textView_dist_bt"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Inverse to RTK Shot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_dist_rtk"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:textColor="@android:color/background_light"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/b_calc_overall"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="From RTK to BT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_dist_bt"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:textColor="@android:color/background_light"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/editText_dist_rtk"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Overall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_calc_overall"
+        android:onClick="calcOverall"
+        android:layout_below="@+id/textView_rtk_result"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
